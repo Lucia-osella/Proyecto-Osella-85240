@@ -1,0 +1,250 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ESTILOS GENERALES ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.menu {
+    list-style: none;
+    background-color: #B8D1B5;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #A5C4A3;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #E88E9C;
+}
+
+/* ===== SECCIÓN PRINCIPAL ===== */
+.presentacion {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.presentacion h1 span {
+    color: #B8D1B5; 
+    font-weight: bold;
+}
+.presentacion p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #444;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== IMAGEN ===== */
+.perfil-img {
+    width: 250px;
+    border-radius: 15px;
+    margin: 20px auto;
+    border: 4px solid #B8D1B5;
+}
+
+/* ===== SECCIÓN ACERCA DE ===== */
+.acerca {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.acerca h1 {
+    color: #E88E9C;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.contenido-acerca img.acerca-img {
+    width: 250px;
+    border-radius: 15px;
+    margin: 20px auto;
+    border: 4px solid #B8D1B5;
+}
+
+.contenido-acerca p {
+    font-size: 1.1em;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== SECCIÓN CONTACTO ===== */
+.contacto {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contacto h1 {
+    color: #E88E9C;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contacto img {
+    width: 150px;
+    margin: 10px;
+    border: 3px solid #B8D1B5;
+    border-radius: 8px;
+}
+
+.contacto p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* ===== FORMULARIO ===== */
+.formulario-contacto label {
+    display: block;
+    margin: 5px 0 3px;
+    font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario-contacto button {
+    background-color: #E88E9C;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ===== SECCIÓN EXPERIENCIA ===== */
+.experiencia {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.experiencia h1 {
+    color: #E88E9C;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.experiencia h2 {
+    color: #B8D1B5;
+    font-size: 1.6em;
+    margin: 20px 0 10px;
+}
+
+.experiencia p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.experiencia ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.experiencia ul li {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Imagen en experiencia */
+.experiencia-img {
+    width: 200px;
+    margin: 20px auto;
+    border: 4px solid #B8D1B5;
+    border-radius: 10px;
+}
+/* ===== SECCIÓN PROYECTOS ===== */
+.proyectos {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.proyectos h1 {
+    color: #E88E9C;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.proyectos p {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.galeria img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid #B8D1B5;
+}
+
+
+
+/* ===== FOOTER ===== */
+footer {
+
+    margin-top: 40px;
+    padding: 15px;
+    text-align: center;
+    background-color: #B8D1B5;
+    color: #333;
+    font-size: 0.9em;
+    border-top: 2px solid #A5C4A3;
+}
