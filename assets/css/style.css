@@ -141,58 +141,74 @@ textarea:focus {
 /* =========================
    CONTACTO
 ========================= */
+/* Centrar y limitar ancho de la tarjeta de contacto */
+.contact-card {
+  max-width: 430px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Que los ítems queden prolijos cuando centramos el contenedor */
+.contact-card .list-group { 
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Línea separadora suave entre ítems */
+.list-group-item { background: transparent; }
+.list-group-item + .list-group-item { border-top: 1px dashed #cfdacf; }
+
+.bg-light.shadow-sm { 
+  background: linear-gradient(180deg, #ffffff 0%, #f7faf7 100%); 
+  border-color: #cfe3cf;
+}
+.link-underline:hover { text-decoration: underline; }
+
 .contacto {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 .contacto h1 {
-    color: #E88E9C;
-    font-size: 2em;
-    margin-bottom: 10px;
+  color: #E88E9C;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .contacto img {
-    width: 150px;
-    margin: 10px;
-    border: 3px solid #B8D1B5;
-    border-radius: 8px;
+  width: 150px;
+  margin: 10px;
+  border: 3px solid #B8D1B5;
+  border-radius: 8px;
 }
 
-.contacto p {
-    margin: 5px 0;
-    font-size: 1em;
-}
+.contacto p { margin: 5px 0; font-size: 1em; }
 
-.formulario-contacto label {
-    display: block;
-    margin: 5px 0 3px;
-    font-weight: bold;
-}
+.formulario-contacto label { display: block; margin: 5px 0 3px; font-weight: bold; }
 
 .formulario-contacto input,
 .formulario-contacto textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .formulario-contacto button {
-    background-color: #E88E9C;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: #E88E9C;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
-
 /* =========================
    EXPERIENCIA
 ========================= */
