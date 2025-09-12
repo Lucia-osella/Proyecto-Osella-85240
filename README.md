@@ -10,41 +10,6 @@ Repositorio: https://github.com/Lucia-osella/Proyecto-Osella-85240
 Sitio (GitHub Pages): https://lucia-osella.github.io/Proyecto-Osella-85240/
 
 
-📦 Estructura del proyecto
-Proyecto-Osella-85240/
-├─ index.html
-├─ pages/
-│  ├─ acercade.html
-│  ├─ experiencia.html
-│  ├─ proyectos.html
-│  └─ contacto.html
-├─ assets/
-│  ├─ img/                     # Imágenes optimizadas
-│  ├─ css/
-│  │  └─ style.css             # CSS generado por SASS (+ sourcemap)
-│  └─ scss/
-│     ├─ base/
-│     │  ├─ _variables.scss    # Tokens (paleta, sombras, etc.) + CSS Custom Props
-│     │  └─ _mixins.scss       # Mixins + placeholders (%surface-card, %chip)
-│     ├─ utils/
-│     │  ├─ _reset.scss        # Reset + accesibilidad (focus)
-│     │  ├─ _typography.scss   # Headings, párrafos, utilidades de texto
-│     ├─ components/
-│     │  ├─ _buttons.scss
-│     │  ├─ _forms.scss
-│     │  ├─ _cards.scss
-│     │  └─ _navbar.scss
-│     ├─ layout/
-│     │  ├─ _footer.scss
-│     ├─ pages/
-│     │  ├─ _home.scss
-│     │  ├─ _acercade.scss
-│     │  ├─ _experiencia.scss
-│     │  ├─ _proyectos.scss
-│     │  └─ _contacto.scss
-│     └─ main.scss             # Punto de entrada (usa @use)
-└─ .gitignore
-
 🛠️ Tecnologías y decisiones
 
 HTML5 semántico + Bootstrap 5 (grillas y utilidades).
