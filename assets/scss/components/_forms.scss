@@ -1,0 +1,14 @@
+/* Inputs y labels generales (contacto hereda) */
+.form-control{
+  border-radius: 12px;
+  border: 1px solid var(--ui-border);
+  background: #fff;
+  box-shadow: 0 6px 16px var(--ui-shadow);
+  transition: border-color .12s ease, box-shadow .12s ease;
+}
+.form-control:focus{
+  border-color: #a7c9a5;
+  box-shadow: 0 0 0 .2rem rgba(25,135,84,.12), 0 8px 22px var(--ui-shadow);
+  outline: 0;
+}
+.form-label{ color:#3b453f; font-weight:600; }

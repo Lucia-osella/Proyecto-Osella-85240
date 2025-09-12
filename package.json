@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-lucia",
+  "private": true,
+  "scripts": {
+    "dev": "sass --watch assets/scss/main.scss assets/css/style.css --style=expanded --source-map",
+    "build": "sass assets/scss/main.scss assets/css/style.css --style=compressed --no-source-map"
+  }
+}

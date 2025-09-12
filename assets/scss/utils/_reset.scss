@@ -1,0 +1,24 @@
+@use "../base/mixins" as *;
+
+*{ box-sizing: border-box; margin:0; padding:0; }
+
+html, body{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+main{ flex: 1; }
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: #F5F5F5;
+  color: #333;
+  line-height: 1.6;
+}
+
+img{ max-width:100%; height:auto; display:block; }
+
+a{ color: inherit; text-decoration: none; }
+a:hover{ color: var(--ui-accent-2); }
+a:focus, button:focus, input:focus, textarea:focus{ @include focus-ring; }

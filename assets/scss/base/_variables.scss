@@ -1,0 +1,21 @@
+// Paleta y constantes Sass
+$ui-bg: #f6faf7;
+$ui-soft: #f0f6f1;
+$ui-accent: #B8D1B5; // verde
+$ui-accent-2: #E88E9C; // rosa
+$ui-ink: #2c3430; // texto
+$ui-muted: #6b746f; // texto secundario
+$ui-border: #d9e5db; // bordes
+$ui-shadow: rgba(25, 55, 35, .08); // sombra
+
+// Exponer como CSS variables para runtime
+:root {
+  --ui-bg:#{$ui-bg};
+  --ui-soft:#{$ui-soft};
+  --ui-accent:#{$ui-accent};
+  --ui-accent-2:#{$ui-accent-2};
+  --ui-ink:#{$ui-ink};
+  --ui-muted:#{$ui-muted};
+  --ui-border:#{$ui-border};
+  --ui-shadow:#{$ui-shadow};
+}

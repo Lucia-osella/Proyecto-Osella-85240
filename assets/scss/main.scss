@@ -1,0 +1,32 @@
+/* =========================
+   MAIN ENTRY (compila a assets/css/style.css)
+   Orden: tokens → utils → components → layout → pages
+========================= */
+
+/* 1) Tokens / helpers */
+@use "base/variables" as *;
+@use "base/mixins"    as *;
+
+/* 2) Utils globales */
+@use "utils/reset";
+@use "utils/typography";
+@use "utils/utilities";  
+
+/* 3) Componentes */
+@use "components/buttons";
+@use "components/forms";
+@use "components/cards";
+@use "components/navbar";
+
+/* 4) Layout */
+@use "layout/grid";
+@use "layout/sections";
+@use "layout/footer";
+@use "layout/legacy/legacy";
+
+/* 5) Páginas */
+@use "pages/home";
+@use "pages/acercade";
+@use "pages/experiencia";
+@use "pages/proyectos";
+@use "pages/contacto";

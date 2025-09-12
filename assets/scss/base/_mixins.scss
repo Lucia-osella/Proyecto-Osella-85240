@@ -1,0 +1,50 @@
+/* =======================
+   Breakpoints
+======================= */
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px
+);
+
+/* Up (min-width) */
+@mixin respond($bp) {
+  @media (min-width: map-get($breakpoints, $bp)) { @content; }
+}
+
+/* Down (max-width) */
+@mixin respond-down($bp) {
+  $val: map-get($breakpoints, $bp);
+  @media (max-width: calc(#{$val} - 0.02px)) { @content; }
+}
+
+/* =======================
+   Accesibilidad
+======================= */
+@mixin focus-ring {
+  outline: 3px solid var(--ui-accent-2);
+  outline-offset: 2px;
+}
+
+/* =======================
+   Superficies reutilizables
+======================= */
+@mixin surface-card($pad: 16px, $radius: 12px) {
+  background: linear-gradient(180deg, #ffffff 0%, #f7faf7 100%);
+  border: 1px solid var(--ui-border);
+  border-radius: $radius;
+  box-shadow: 0 10px 24px var(--ui-shadow);
+  padding: $pad;
+}
+
+/* Chip (pill) */
+@mixin chip($radius: 999px) {
+  border: 1px solid var(--ui-border);
+  background: #ffffff;
+  border-radius: $radius;
+  box-shadow: 0 6px 16px var(--ui-shadow);
+}
+
+
+%surface-card { @include surface-card(); }
+%chip         { @include chip(); }

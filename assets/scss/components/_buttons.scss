@@ -1,0 +1,23 @@
+/* Botones unificados a verde */
+.btn.btn-success{
+  border-radius: 12px;
+  box-shadow: 0 6px 16px var(--ui-shadow);
+  border: 1px solid #a7c9a5;
+}
+.btn.btn-success:hover{ filter: brightness(0.98); }
+
+/* Outline que se ve como success */
+.btn.btn-outline-secondary{
+  border-radius: 12px;
+  background-color: #198754;
+  color: #fff;
+  border: 1px solid #198754;
+}
+.btn.btn-outline-secondary:hover{
+  background-color: #157347;
+  border-color: #146c43;
+  color: #fff;
+}
+
+/* Subrayado limpio en hover */
+.link-underline:hover{ text-decoration: underline; }

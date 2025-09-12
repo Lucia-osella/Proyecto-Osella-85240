@@ -1,0 +1,12 @@
+header .navbar{
+  backdrop-filter: saturate(1.1) blur(6px);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%) !important;
+  border-bottom: 1px solid var(--ui-border);
+}
+.navbar-brand{ letter-spacing:.2px; }
+.navbar .nav-link{ border-radius:10px; padding:.5rem .85rem; }
+.navbar .nav-link:hover{ background: var(--ui-soft); }
+.navbar .nav-link.active{
+  background: #e9f3eb;
+  border: 1px solid var(--ui-border);
+}

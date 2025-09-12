@@ -1,0 +1,22 @@
+/* Utilidades generadas con @each: elevaciones y radios */
+
+$elevations: (
+  1: 0 2px 6px,
+  2: 0 6px 16px,
+  3: 0 12px 24px
+);
+
+@each $k, $shadow in $elevations {
+  .elev-#{$k} { box-shadow: #{$shadow} var(--ui-shadow); }
+}
+
+$radii: (
+  sm: 8px,
+  md: 12px,
+  lg: 16px,
+  xl: 24px
+);
+
+@each $name, $radius in $radii {
+  .radius-#{$name} { border-radius: $radius; }
+}
