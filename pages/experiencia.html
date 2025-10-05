@@ -1,21 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Experiencia | Lucia Osella</title>
-  <meta name="description" content="Portfolio de Lucía Osella, diseñadora UI/UX de Córdoba, Argentina." />
-  <!-- Bootstrap CSS desde CDN -->
+  <meta name="description" content="Experiencia de Lucía Osella, diseñadora UX/UI de Córdoba, Argentina: proceso UX, sistemas de diseño, prototipado, testing y accesibilidad." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#B8D1B5" />
+
+  <link rel="canonical" href="https://TU-DOMINIO-FINAL/pages/experiencia.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Experiencia | Lucia Osella">
+  <meta property="og:description" content="Proceso UX, UI & design systems, prototipado y accesibilidad. Conocé mi forma de trabajar.">
+  <meta property="og:url" content="https://TU-DOMINIO-FINAL/pages/experiencia.html">
+  <meta property="og:image" content="https://TU-DOMINIO-FINAL/assets/img/experiencia.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Experiencia | Lucia Osella">
+  <meta name="twitter:description" content="Proceso UX, UI & design systems, prototipado y accesibilidad. Conocé mi forma de trabajar.">
+  <meta name="twitter:image" content="https://TU-DOMINIO-FINAL/assets/img/experiencia.jpg">
+
+  <!-- Bootstrap CSS -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS (animaciones) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
   <!-- Hoja de estilos personalizada -->
   <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- JSON-LD: WebPage + Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"Experiencia | Lucia Osella",
+        "url":"https://TU-DOMINIO-FINAL/pages/experiencia.html",
+        "description":"Experiencia y forma de trabajo de una diseñadora UX/UI: investigación, UI components, prototipado y accesibilidad."
+      },
+      {
+        "@type":"Person",
+        "name":"Lucía Osella",
+        "jobTitle":"UX/UI Designer",
+        "url":"https://TU-DOMINIO-FINAL/",
+        "sameAs":[ "https://www.behance.net/lucaosella" ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
+  <!-- ========================
+       ENCABEZADO / NAVBAR
+  ========================== -->
   <header class="border-bottom">
-    <!-- Barra de navegación con Bootstrap -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Navegación principal">
       <div class="container">
         <!-- Marca / Logo -->
@@ -40,71 +87,77 @@
     </nav>
   </header>
 
+  <!-- ========================
+       CONTENIDO PRINCIPAL
+  ========================== -->
+  <main class="experience-page" aria-labelledby="exp-title">
+    <!-- ✨ AOS aplicado a TODO el contenido de la página -->
+    <div data-aos="zoom-in-down">
+      <section class="experiencia">
+        <!-- Título principal -->
+        <h1 id="exp-title">Experiencia</h1>
+        <p>
+          Me estoy formando como diseñadora <strong>UX/UI</strong> con foco en <strong>usabilidad</strong>,
+          <strong>accesibilidad</strong> y <strong>UI escalable</strong>. Disfruto convertir problemas difusos en
+          flujos simples y pantallas claras, colaborando de cerca con producto y desarrollo.
+        </p>
 
-<main class="experience-page">
+        <!-- Tarjetas de experiencia con breve descripción -->
+        <div class="exp-cards">
+          <article class="exp-card">
+            <h2>Proceso UX</h2>
+            <p>Investigación contextual, definición de problemas, hipótesis y priorización por impacto para enfocar el esfuerzo donde más valor aporta.</p>
+          </article>
 
-    <section class="experiencia">
-      <!-- Título principal -->
-      <h1>Experiencia</h1>
-      <p>
-        Me estoy formando como diseñadora <strong>UX/UI</strong> con foco en <strong>usabilidad</strong>,
-        <strong>accesibilidad</strong> y <strong>UI escalable</strong>. Disfruto convertir problemas difusos en
-        flujos simples y pantallas claras, colaborando de cerca con producto y desarrollo.
-      </p>
+          <article class="exp-card">
+            <h2>UI & Sistemas de diseño</h2>
+            <p>Construcción de componentes consistentes, jerarquía tipográfica y uso de grids y tokens para acelerar el handoff.</p>
+          </article>
 
-      <!-- Tarjetas de experiencia con breve descripción -->
-      <div class="exp-cards">
-        <article class="exp-card">
-          <h2>Proceso UX</h2>
-          <p>Investigación contextual, definición de problemas, hipótesis y priorización por impacto para enfocar el esfuerzo donde más valor aporta.</p>
-        </article>
+          <article class="exp-card">
+            <h2>Prototipado & Testing</h2>
+            <p>Prototipos navegables (baja → alta fidelidad) y tests rápidos para validar antes de construir y reducir retrabajo.</p>
+          </article>
 
-        <article class="exp-card">
-          <h2>UI & Sistemas de diseño</h2>
-          <p>Construcción de componentes consistentes, jerarquía tipográfica y uso de grids y tokens para acelerar el handoff.</p>
-        </article>
+          <article class="exp-card">
+            <h2>Accesibilidad</h2>
+            <p>Buenas prácticas WCAG (AA): contraste, estados, foco y contenidos legibles para experiencias inclusivas.</p>
+          </article>
+        </div>
 
-        <article class="exp-card">
-          <h2>Prototipado & Testing</h2>
-          <p>Prototipos navegables (baja → alta fidelidad) y tests rápidos para validar antes de construir y reducir retrabajo.</p>
-        </article>
+        <!-- Logros / Impacto -->
+        <h2 class="mt-24">Logros e impacto</h2>
+        <ul class="text-start" style="max-width: 780px; margin: 0 auto;">
+          <li>Reducción de pasos de registro en un 30% en prototipo validado con usuarios.</li>
+          <li>Mejora de claridad de navegación con etiquetas, estados activos y jerarquía visual.</li>
+          <li>Organización de un mini design system para iterar más rápido y alinear al equipo.</li>
+        </ul>
 
-        <article class="exp-card">
-          <h2>Accesibilidad</h2>
-          <p>Buenas prácticas WCAG (AA): contraste, estados, foco y contenidos legibles para experiencias inclusivas.</p>
-        </article>
-      </div>
+        <!-- Listado de habilidades en formato de chips -->
+        <h2 class="mt-24">Habilidades</h2>
+        <ul class="skills-list" aria-label="Habilidades principales">
+          <li class="skill">Figma</li>
+          <li class="skill">FigJam</li>
+          <li class="skill">UX Research</li>
+          <li class="skill">Wireframing</li>
+          <li class="skill">Prototipado</li>
+          <li class="skill">Accesibilidad</li>
+          <li class="skill">Heurísticas de Nielsen</li>
+          <li class="skill">Atomic Design</li>
+          <li class="skill">Design Tokens</li>
+          <li class="skill">User Flows</li>
+          <li class="skill">Journey Maps</li>
+        </ul>
 
-      <!-- Logros / Impacto -->
-      <h2 class="mt-24">Logros e impacto</h2>
-      <ul class="text-start" style="max-width: 780px; margin: 0 auto;">
-        <li>Reducción de pasos de registro en un 30% en prototipo validado con usuarios.</li>
-        <li>Mejora de claridad de navegación con etiquetas, estados activos y jerarquía visual.</li>
-        <li>Organización de un mini design system para iterar más rápido y alinear al equipo.</li>
-      </ul>
-
-      <!-- Listado de habilidades en formato de chips -->
-      <h2 class="mt-24">Habilidades</h2>
-      <ul class="skills-list" aria-label="Habilidades principales">
-        <li class="skill">Figma</li>
-        <li class="skill">FigJam</li>
-        <li class="skill">UX Research</li>
-        <li class="skill">Wireframing</li>
-        <li class="skill">Prototipado</li>
-        <li class="skill">Accesibilidad</li>
-        <li class="skill">Heurísticas de Nielsen</li>
-        <li class="skill">Atomic Design</li>
-        <li class="skill">Design Tokens</li>
-        <li class="skill">User Flows</li>
-        <li class="skill">Journey Maps</li>
-      </ul>
-
-      <!-- Imagen ilustrativa -->
-      <img src="../assets/img/experiencia.jpg" alt="Ilustración de experiencia" class="experiencia-img" />
-    </section>
+        <!-- Imagen ilustrativa -->
+        <img src="../assets/img/experiencia.jpg" alt="Ilustración de experiencia" class="experiencia-img" />
+      </section>
+    </div>
   </main>
 
-
+  <!-- ========================
+       FOOTER
+  ========================== -->
   <footer>
     <p>&copy; 2025 Lucia Osella | Behance:
       <a href="https://www.behance.net/lucaosella" target="_blank" rel="noopener noreferrer">
@@ -113,7 +166,19 @@
     </p>
   </footer>
 
-  <!-- Bootstrap JS (necesario para colapso del menú) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
+  <!-- AOS JS + init suave (sin archivo extra) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 600,
+      easing: 'ease-out-cubic',
+      offset: 60,
+      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
+  </script>
+</body>
+</html>

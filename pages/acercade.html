@@ -3,13 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acerca de | Lucia Osella</title>
-  <meta name="description" content="Portfolio de Lucía Osella, diseñadora UI/UX de Córdoba, Argentina." />
 
-  <!-- Bootstrap CSS desde CDN -->
+  <title>Acerca de | Lucia Osella</title>
+  <meta name="description" content="Conocé a Lucía Osella, diseñadora UX/UI de Córdoba, Argentina: formación, valores y habilidades." />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="canonical" href="https://TU-DOMINIO-FINAL/pages/acercade.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Acerca de | Lucia Osella">
+  <meta property="og:description" content="Conocé a Lucía Osella, diseñadora UX/UI de Córdoba, Argentina: formación, valores y habilidades.">
+  <meta property="og:url" content="https://TU-DOMINIO-FINAL/pages/acercade.html">
+  <meta property="og:image" content="https://TU-DOMINIO-FINAL/assets/img/foto-acerca.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Acerca de | Lucia Osella">
+  <meta name="twitter:description" content="Conocé a Lucía Osella, diseñadora UX/UI de Córdoba, Argentina: formación, valores y habilidades.">
+  <meta name="twitter:image" content="https://TU-DOMINIO-FINAL/assets/img/foto-acerca.jpg">
+
+  <!-- Theme color (móvil) -->
+  <meta name="theme-color" content="#B8D1B5">
+
+  <!-- Bootstrap CSS -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS (animaciones) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
   <!-- Hoja de estilos personalizada -->
   <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- JSON-LD (SEO): WebPage + Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"Acerca de | Lucia Osella",
+        "url":"https://TU-DOMINIO-FINAL/pages/acercade.html",
+        "description":"Conocé a Lucía Osella, diseñadora UX/UI de Córdoba, Argentina: formación, valores y habilidades."
+      },
+      {
+        "@type":"Person",
+        "name":"Lucía Osella",
+        "jobTitle":"UX/UI Designer",
+        "url":"https://TU-DOMINIO-FINAL/",
+        "image":"https://TU-DOMINIO-FINAL/assets/img/foto-perfil.jpg",
+        "sameAs":[ "https://www.behance.net/lucaosella" ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -45,66 +93,71 @@
   <!-- ========================
        CONTENIDO PRINCIPAL
   ========================== -->
-<main id="contenido" class="py-5 about-page">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <!-- Imagen -->
-        <div class="col-12 col-md-5 text-center">
-          <img src="../assets/img/foto-acerca.jpg" class="img-fluid rounded-4 border border-4"
-               alt="Retrato de Lucía Osella" loading="lazy" />
-        </div>
-
-        <!-- Texto -->
-        <div class="col-12 col-md-7">
-          <h1 class="mb-3">Acerca de mí</h1>
-          <p class="lead">Diseñadora <strong>UX/UI</strong> de 21 años en Córdoba, Argentina.</p>
-
-          <p>
-            Exploro y creo soluciones digitales con foco en usabilidad y accesibilidad. Mi formación en CODERHOUSE me dio método, investigación y enfoque centrado en el usuario.
-          </p>
-          <p>
-            Aspiro a consolidar mi rol en equipos de producto, profundizar en <strong>design systems</strong> y <strong>accesibilidad</strong>, y participar en proyectos end-to-end: desde la investigación hasta el handoff con desarrollo.
-          </p>
-          <p>
-            Mi manera de trabajar combina empatía con las personas usuarias y claridad técnica con el equipo. Creo en el diseño como puente entre necesidades de negocio y experiencias que realmente funcionan.
-          </p>
-
-          <!-- Valores -->
-          <div class="mt-4">
-            <h2 class="h5">Mis valores como diseñadora</h2>
-            <ul>
-              <li>Empatía y escucha activa.</li>
-              <li>Claridad en la comunicación visual y escrita.</li>
-              <li>Consistencia en cada detalle de UI.</li>
-              <li>Accesibilidad como requisito, no como extra.</li>
-              <li>Trabajo en equipo con producto y desarrollo.</li>
-            </ul>
+  <main id="contenido" class="py-5 about-page">
+    <!-- ✨ Un solo contenedor con AOS aplicado a TODO el contenido -->
+    <div data-aos="zoom-in-up">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <!-- Imagen -->
+          <div class="col-12 col-md-5 text-center">
+            <img src="../assets/img/foto-acerca.jpg"
+                 class="img-fluid rounded-4 border border-4"
+                 alt="Retrato de Lucía Osella, diseñadora UX/UI"
+                 loading="lazy" decoding="async" />
           </div>
 
-          <!-- Mini grilla de habilidades -->
-          <div class="row g-3 mt-4">
-            <div class="col-6 col-lg-4">
-              <div class="p-3 border rounded-3 text-center">UX Research</div>
+          <!-- Texto -->
+          <div class="col-12 col-md-7">
+            <h1 class="mb-3">Acerca de mí</h1>
+            <p class="lead">Diseñadora <strong>UX/UI</strong> de 21 años en Córdoba, Argentina.</p>
+
+            <p>
+              Exploro y creo soluciones digitales con foco en usabilidad y accesibilidad. Mi formación en CODERHOUSE me dio método, investigación y enfoque centrado en el usuario.
+            </p>
+            <p>
+              Aspiro a consolidar mi rol en equipos de producto, profundizar en <strong>design systems</strong> y <strong>accesibilidad</strong>, y participar en proyectos end-to-end: desde la investigación hasta el handoff con desarrollo.
+            </p>
+            <p>
+              Mi manera de trabajar combina empatía con las personas usuarias y claridad técnica con el equipo. Creo en el diseño como puente entre necesidades de negocio y experiencias que realmente funcionan.
+            </p>
+
+            <!-- Valores -->
+            <div class="mt-4">
+              <h2 class="h5">Mis valores como diseñadora</h2>
+              <ul>
+                <li>Empatía y escucha activa.</li>
+                <li>Claridad en la comunicación visual y escrita.</li>
+                <li>Consistencia en cada detalle de UI.</li>
+                <li>Accesibilidad como requisito, no como extra.</li>
+                <li>Trabajo en equipo con producto y desarrollo.</li>
+              </ul>
             </div>
-            <div class="col-6 col-lg-4">
-              <div class="p-3 border rounded-3 text-center">UI Design</div>
-            </div>
-            <div class="col-6 col-lg-4">
-              <div class="p-3 border rounded-3 text-center">Prototipado</div>
-            </div>
-            <div class="col-6 col-lg-4">
-              <div class="p-3 border rounded-3 text-center">Design Systems</div>
-            </div>
-            <div class="col-6 col-lg-4">
-              <div class="p-3 border rounded-3 text-center">Accesibilidad</div>
-            </div>
-            <div class="col-6 col-lg-4">
-              <div class="p-3 border rounded-3 text-center">Handoff</div>
+
+            <!-- Mini grilla de habilidades -->
+            <div class="row g-3 mt-4">
+              <div class="col-6 col-lg-4">
+                <div class="p-3 border rounded-3 text-center">UX Research</div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="p-3 border rounded-3 text-center">UI Design</div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="p-3 border rounded-3 text-center">Prototipado</div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="p-3 border rounded-3 text-center">Design Systems</div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="p-3 border rounded-3 text-center">Accesibilidad</div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="p-3 border rounded-3 text-center">Handoff</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div><!-- /container -->
+    </div><!-- /data-aos -->
   </main>
 
   <!-- ========================
@@ -120,5 +173,19 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS + init suave (sin archivo extra) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,                // anima una sola vez
+      duration: 600,             // 0.6s suave
+      easing: 'ease-out-cubic',
+      offset: 80,                // empieza un poquito antes
+      // Respeta accesibilidad:
+      // desactiva si el usuario prefiere menos movimiento
+      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
+  </script>
 </body>
 </html>
