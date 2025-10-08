@@ -24,20 +24,18 @@
   <meta name="twitter:description" content="Escribí a Lucía Osella (UX/UI). Consulta por proyectos, colaboraciones y oportunidades.">
   <meta name="twitter:image" content="https://portfolio-osella-85240.vercel.app/assets/img/foto-perfil.jpg">
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <!-- AOS (animaciones) -->
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-  <!-- Hoja de estilos -->
+  <!-- Estilos -->
   <link rel="stylesheet" href="../assets/css/style.css" />
 
-  <!-- JSON-LD: WebPage + Person con contacto -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -53,9 +51,8 @@
         "name":"Lucía Osella",
         "jobTitle":"UX/UI Designer",
         "url":"https://portfolio-osella-85240.vercel.app/",
-        "sameAs":[ "https://www.behance.net/lucaosella" ],
-        "image":"https://portfolio-osella-85240.vercel.app/assets/img/foto-perfil.jpg",
-        "contactPoint": {
+        "sameAs":["https://www.behance.net/lucaosella"],
+        "contactPoint":{
           "@type":"ContactPoint",
           "contactType":"customer support",
           "email":"Osellalucia790@gmail.com",
@@ -70,9 +67,6 @@
 </head>
 
 <body>
-  <!-- ========================
-       ENCABEZADO / NAVBAR
-  ========================== -->
   <header class="border-bottom">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Navegación principal">
       <div class="container">
@@ -81,7 +75,6 @@
           aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegación">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse justify-content-end" id="mainNav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
@@ -95,166 +88,69 @@
     </nav>
   </header>
 
-  <!-- ========================
-       CONTENIDO PRINCIPAL
-  ========================== -->
   <main id="contenido" class="py-5 contact-page" aria-labelledby="contacto-title">
-    <!-- 👇 Animación aplicada al contenido completo -->
     <div data-aos="fade-up" data-aos-duration="3000">
       <div class="container">
         <h1 id="contacto-title" class="mb-4 text-center">¡Contáctame!</h1>
-        <p class="text-center mb-5">
-          Estoy abierta a colaboraciones, proyectos freelance y oportunidades para seguir creciendo como diseñadora <strong>UX/UI</strong>. 
-          Si tenés una idea o querés charlar sobre un desafío digital, escribime y vemos cómo puedo ayudarte a darle forma.
-        </p>
+        <p class="text-center mb-5">Estoy abierta a colaboraciones, proyectos freelance y oportunidades para seguir creciendo como diseñadora <strong>UX/UI</strong>. Si tenés una idea o querés charlar sobre un desafío digital, escribime y vemos cómo puedo ayudarte a darle forma.</p>
 
         <div class="row g-4 align-items-stretch">
-          <!-- Columna: datos de contacto -->
           <section class="col-12 col-lg-6" aria-labelledby="info-contacto-title">
             <div class="p-4 border rounded-3 h-100 bg-light shadow-sm contact-card mx-auto text-center">
               <h2 id="info-contacto-title" class="h5 mb-3">Información de contacto</h2>
-
               <ul class="list-group list-group-flush mb-3 text-start">
                 <li class="list-group-item px-0 d-flex align-items-start gap-3">
                   <i class="bi bi-envelope-at fs-5 text-success mt-1" aria-hidden="true"></i>
-                  <div>
-                    <div class="fw-semibold">Email</div>
-                    <a href="mailto:Osellalucia790@gmail.com" class="link-underline link-underline-opacity-0">
-                      Osellalucia790@gmail.com
-                    </a>
-                  </div>
+                  <div><div class="fw-semibold">Email</div><a href="mailto:Osellalucia790@gmail.com" class="link-underline link-underline-opacity-0">Osellalucia790@gmail.com</a></div>
                 </li>
-
                 <li class="list-group-item px-0 d-flex align-items-start gap-3">
                   <i class="bi bi-telephone fs-5 text-success mt-1" aria-hidden="true"></i>
-                  <div>
-                    <div class="fw-semibold">Teléfono</div>
-                    <a href="tel:+543512090674" class="link-underline link-underline-opacity-0">
-                      +54 351 209 0674
-                    </a>
-                  </div>
+                  <div><div class="fw-semibold">Teléfono</div><a href="tel:+543512090674" class="link-underline link-underline-opacity-0">+54 351 209 0674</a></div>
                 </li>
-
                 <li class="list-group-item px-0 d-flex align-items-start gap-3">
                   <i class="bi bi-behance fs-5 text-success mt-1" aria-hidden="true"></i>
-                  <div>
-                    <div class="fw-semibold">Behance</div>
-                    <a href="https://www.behance.net/lucaosella" target="_blank" rel="noopener noreferrer"
-                      class="link-underline link-underline-opacity-0">
-                      behance.net/lucaosella
-                    </a>
-                  </div>
+                  <div><div class="fw-semibold">Behance</div><a href="https://www.behance.net/lucaosella" target="_blank" rel="noopener noreferrer" class="link-underline link-underline-opacity-0">behance.net/lucaosella</a></div>
                 </li>
-
                 <li class="list-group-item px-0 d-flex align-items-start gap-3">
                   <i class="bi bi-instagram fs-5 text-success mt-1" aria-hidden="true"></i>
-                  <div>
-                    <div class="fw-semibold">Redes</div>
-                    <span>@lu.osella</span>
-                  </div>
+                  <div><div class="fw-semibold">Redes</div><span>@lu.osella</span></div>
                 </li>
               </ul>
 
-              <p id="sla" class="small text-muted">
-                Disponibilidad: lunes a viernes de 9:00 a 18:00 (UTC-3). Tiempo de respuesta habitual: dentro de las 24h.
-              </p>
+              <p id="sla" class="small text-muted">Disponibilidad: lunes a viernes de 9:00 a 18:00 (UTC-3). Tiempo de respuesta habitual: dentro de las 24h.</p>
 
               <div class="d-flex flex-wrap gap-2 justify-content-center">
-                <a class="btn btn-success" href="mailto:Osellalucia790@gmail.com" aria-label="Escribir un email a Lucía Osella">
-                  <i class="bi bi-send me-1" aria-hidden="true"></i> Escribirme
-                </a>
-                <a class="btn btn-outline-secondary" href="https://www.behance.net/lucaosella" target="_blank"
-                  rel="noopener noreferrer" aria-label="Ver el Behance de Lucía Osella">
-                  <i class="bi bi-behance me-1" aria-hidden="true"></i> Ver Behance
-                </a>
+                <a class="btn btn-success" href="mailto:Osellalucia790@gmail.com" aria-label="Escribir un email a Lucía Osella"><i class="bi bi-send me-1" aria-hidden="true"></i> Escribirme</a>
+                <a class="btn btn-outline-secondary" href="https://www.behance.net/lucaosella" target="_blank" rel="noopener noreferrer" aria-label="Ver el Behance de Lucía Osella"><i class="bi bi-behance me-1" aria-hidden="true"></i> Ver Behance</a>
               </div>
             </div>
           </section>
 
-          <!-- Columna: formulario -->
           <section class="col-12 col-lg-6" aria-labelledby="form-title">
             <div class="h-100 d-flex flex-column">
               <h2 id="form-title" class="visually-hidden">Formulario de contacto</h2>
               <form class="flex-grow-1" method="post" action="#" aria-describedby="sla">
                 <p class="mb-3">Completá el formulario y me pondré en contacto lo antes posible.</p>
-
-                <div class="mb-3">
-                  <label for="nombre" class="form-label">Nombre</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nombre"
-                    name="nombre"
-                    placeholder="Tu nombre"
-                    autocomplete="name"
-                    required
-                  />
-                </div>
-
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    placeholder="tu@email.com"
-                    autocomplete="email"
-                    inputmode="email"
-                    required
-                  />
-                </div>
-
-                <div class="mb-3">
-                  <label for="telefono" class="form-label">Teléfono (opcional)</label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="telefono"
-                    name="telefono"
-                    placeholder="+54 351 ..."
-                    autocomplete="tel"
-                    inputmode="tel"
-                  />
-                </div>
-
-                <div class="mb-3">
-                  <label for="mensaje" class="form-label">Mensaje</label>
-                  <textarea
-                    class="form-control"
-                    id="mensaje"
-                    name="mensaje"
-                    rows="4"
-                    placeholder="Escribí tu mensaje"
-                    required
-                  ></textarea>
-                </div>
-
+                <div class="mb-3"><label for="nombre" class="form-label">Nombre</label><input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required /></div>
+                <div class="mb-3"><label for="email" class="form-label">Email</label><input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" autocomplete="email" inputmode="email" required /></div>
+                <div class="mb-3"><label for="telefono" class="form-label">Teléfono (opcional)</label><input type="tel" class="form-control" id="telefono" name="telefono" placeholder="+54 351 ..." autocomplete="tel" inputmode="tel" /></div>
+                <div class="mb-3"><label for="mensaje" class="form-label">Mensaje</label><textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu mensaje" required></textarea></div>
                 <button type="submit" class="btn btn-success">Enviar</button>
               </form>
             </div>
           </section>
         </div>
-        <!-- /row -->
       </div>
     </div>
   </main>
 
-  <!-- ========================
-       FOOTER
-  ========================== -->
   <footer>
     <p>&copy; 2025 Lucia Osella | Behance:
-      <a href="https://www.behance.net/lucaosella" target="_blank" rel="noopener noreferrer">
-        behance.net/lucaosella
-      </a>
+      <a href="https://www.behance.net/lucaosella" target="_blank" rel="noopener noreferrer">behance.net/lucaosella</a>
     </p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script> AOS.init(); </script>
 </body>
