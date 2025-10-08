@@ -1,4 +1,9 @@
 /* =======================
+   Módulos Sass
+======================= */
+@use "sass:map";
+
+/* =======================
    Breakpoints
 ======================= */
 $breakpoints: (
@@ -9,12 +14,12 @@ $breakpoints: (
 
 /* Up (min-width) */
 @mixin respond($bp) {
-  @media (min-width: map-get($breakpoints, $bp)) { @content; }
+  @media (min-width: map.get($breakpoints, $bp)) { @content; }
 }
 
 /* Down (max-width) */
 @mixin respond-down($bp) {
-  $val: map-get($breakpoints, $bp);
+  $val: map.get($breakpoints, $bp);
   @media (max-width: calc(#{$val} - 0.02px)) { @content; }
 }
 
@@ -45,6 +50,6 @@ $breakpoints: (
   box-shadow: 0 6px 16px var(--ui-shadow);
 }
 
-
+/* Placeholders */
 %surface-card { @include surface-card(); }
 %chip         { @include chip(); }
