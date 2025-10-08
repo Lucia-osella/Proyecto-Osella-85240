@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Portfolio de Osella Lucía — Comisión 85240 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://portfolio-osella-85240.vercel.app/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://portfolio-osella-85240.vercel.app/pages/acercade.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://portfolio-osella-85240.vercel.app/pages/experiencia.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://portfolio-osella-85240.vercel.app/pages/proyectos.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://portfolio-osella-85240.vercel.app/pages/contacto.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>

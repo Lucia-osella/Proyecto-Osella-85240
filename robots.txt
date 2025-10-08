@@ -1,0 +1,5 @@
+# Portfolio de Osella Lucía — Comisión 85240
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-osella-85240.vercel.app/sitemap.xml
