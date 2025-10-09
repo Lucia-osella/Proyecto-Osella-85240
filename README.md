@@ -189,7 +189,6 @@ sitemap.xml
 </urlset>
 
 
-Actualizá <lastmod> cuando hagas cambios relevantes.
 
 Compatibilidad
 
