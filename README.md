@@ -1,222 +1,205 @@
-Proyecto-Osella-85240 · Portfolio UX/UI (HTML + Bootstrap + SASS)
+Portfolio UX/UI — Proyecto-Osella-85240
 
-Portfolio responsive de Lucía Osella (Córdoba, AR).
-Incluye estructura HTML prolija, estilos con SASS (variables, mixins, placeholders, nesting y operadores), grillas con Bootstrap, y deploy en GitHub Pages.
+Sitio web responsive de Lucía Osella (Córdoba, AR) desarrollado con HTML5, Bootstrap 5, SASS y AOS para animaciones suaves. El proyecto está publicado en Vercel y optimizado con metadatos SEO, robots.txt y sitemap.xml.
 
-🔗 Enlaces de entrega
+Enlaces
 
 Repositorio: https://github.com/Lucia-osella/Proyecto-Osella-85240
 
-Sitio (GitHub Pages): https://lucia-osella.github.io/Proyecto-Osella-85240/
+Sitio en producción (Vercel): https://portfolio-osella-85240.vercel.app/
+
+Tecnologías
+
+HTML5 semántico
+
+Bootstrap 5 (grid, utilidades, componentes)
+
+SASS (variables/tokens, mixins, placeholders con @extend, nesting, @each)
+
+AOS (Animate On Scroll) por CDN
+
+Vercel para deploy
+
+Características
+
+Diseño responsive mobile-first sin overflow horizontal.
+
+Accesibilidad: foco visible, contraste, alt descriptivos y jerarquía tipográfica.
+
+Performance: CSS minificado, recursos desde CDN, imágenes optimizadas.
+
+SEO on-page: título/description por página, Open Graph/Twitter Cards, JSON-LD.
+
+Animaciones: integración de AOS por CDN (sin animaciones inline ni archivos extra).
+
+Estructura
+/            index.html
+/pages/      acercade.html, experiencia.html, proyectos.html, contacto.html
+/assets/
+  /css/      style.css        ← generado por SASS
+  /scss/     base/, pages/, etc.
+  /img/      imágenes del sitio
+vercel.json
+robots.txt
+sitemap.xml
 
 
-🛠️ Tecnologías y decisiones
+En index.html el CSS se referencia como assets/css/style.css.
+En los HTML dentro de /pages/, usar ../assets/css/style.css.
 
-HTML5 semántico + Bootstrap 5 (grillas y utilidades).
+Animaciones (AOS)
 
-SASS con:
+Se carga por CDN y se inicializa al final del <body>:
 
-Variables (tokens): colores, sombras, radios, etc.
-
-Mixins: focus-ring, surface-card, respond()/respond-down().
-
-Placeholders: %surface-card, %chip (extensibles con @extend).
-
-Nesting de selectores y & para estados (:hover, .active, etc.).
-
-Operadores/estructuras: @each (ejemplo incluido abajo).
-
-Accesibilidad: foco visible, contraste, etiquetas y jerarquía.
-
-Performance: CSS minificado, imágenes optimizadas, CDN de Bootstrap.
-
-▶️ Cómo ejecutar y compilar SASS
-Opción A — CLI directa (sin Node)
-# Compilación continua (watch) + minificado
-sass --watch assets/scss/main.scss assets/css/style.css --style=compressed
-
-Opción B — con Node (scripts en package.json)
-# Instalar sass si hace falta
-npm i -D sass
-
-# Compilar una vez (minificado)
-npm run sass:build
-# o vigilar cambios
-npm run sass:watch
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 600,
+    easing: 'ease-out-cubic',
+    offset: 60,
+    disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  });
+</script>
 
 
-Scripts sugeridos en package.json:
+Aplicación por página (contenedor principal):
 
-{
-  "scripts": {
-    "sass:watch": "sass --watch assets/scss/main.scss assets/css/style.css --style=compressed",
-    "sass:build": "sass assets/scss/main.scss assets/css/style.css --style=compressed"
-  }
-}
+index: data-aos="fade-up" en bloques clave
 
-🔧 Vinculación de estilos y librerías
+acerca de: data-aos="zoom-in-up"
 
-En cada HTML:
+experiencia: data-aos="zoom-in-down"
 
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-<!-- Tu CSS generado por SASS -->
-<link rel="stylesheet" href="../assets/css/style.css" />
+proyectos: data-aos="zoom-out"
 
-
-Y al final del <body>:
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-En index.html, el href de style.css es assets/css/style.css.
-En archivos dentro de pages/, usar ../assets/css/style.css.
-
-🧩 Prácticas SASS implementadas
-
-Variables (tokens)
-
-// base/_variables.scss
-$ui-accent: #B8D1B5;
-:root { --ui-accent:#{$ui-accent}; }
-
-
-Mixins
-
-// base/_mixins.scss
-@mixin focus-ring { outline: 3px solid var(--ui-accent-2); outline-offset: 2px; }
-@mixin surface-card($pad:16px,$radius:12px){
-  background: linear-gradient(180deg, #fff 0%, #f7faf7 100%);
-  border:1px solid var(--ui-border);
-  border-radius:$radius;
-  box-shadow:0 10px 24px var(--ui-shadow);
-  padding:$pad;
-}
-
-
-Placeholders + extend
-
-%surface-card { @include surface-card(); }
-
-// Uso
-.exp-card { @extend %surface-card; }
-
-
-Operadores SASS (@each)
-
-$spacers: (sm:.5rem, md:1rem, lg:2rem);
-@each $k, $v in $spacers {
-  .mt-#{$k} { margin-top: $v; }
-}
-
-
-Nesting + &
-
-.navbar .nav-link{
-  border-radius:10px;
-  &:hover{ background: var(--ui-soft); }
-  &.active{ background:#e9f3eb; border:1px solid var(--ui-border); }
-}
-
-
-Media queries con mixins
-
-@include respond(sm){ .hero-buttons{ justify-content:center; flex-wrap:wrap; } }
-
-📱 Responsive & diseño
-
-Layouts con Bootstrap Grid (clases row, col- responsivas).
-
-Mobile-first con ajustes por breakpoint:
-
-sm (≤576px): tipografías, gaps, botones centrados.
-
-md/lg (≥768/992px): respiración, grids de 2/3 columnas, etc.
-
-Cards de proyectos: imagen fija (aspect-ratio), título/desc recortados para que todas las tarjetas queden alineadas.
-
-✅ Checklist contra la consigna
-
-HTML
-
- Estructura semántica y prolija (tabs/indent).
-
- Enlaces funcionales entre páginas.
-
- Imágenes con alt descriptivo y rutas relativas correctas.
-
- Librerías externas linkeadas (Bootstrap CSS/JS).
+contacto: data-aos="fade-up" data-aos-duration="3000"
 
 SASS
 
- CSS trasladado a SCSS modular (% por páginas/áreas).
+Scripts (package.json):
 
- Nesting, @extend (placeholders), mixins, variables.
+{
+  "name": "portfolio-lucia",
+  "private": true,
+  "scripts": {
+    "dev": "sass --watch assets/scss/main.scss assets/css/style.css --style=expanded --source-map",
+    "build": "sass assets/scss/main.scss assets/css/style.css --style=compressed --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}
 
- Operadores del lenguaje SASS (@each) demostrados.
 
- Transiciones/animaciones y transformaciones en componentes (hover de cards, etc.).
+Ejecutar:
 
-Git / GitHub
-
- .gitignore (excluye node_modules, etc.).
-
- Historial de commits con mensajes claros.
-
- Repositorio público y URL compartida.
-
- (Opcional) GitHub Pages activado para deploy.
-
-🧪 Compatibilidad probada
-
-Navegadores: Chrome, Edge, Firefox (últimas versiones).
-
-Viewports: mobile (≤576px), tablet (768–991px), desktop (≥992px).
-
-🚀 Deploy en GitHub Pages
-
-Abrí el repo en GitHub → Settings.
-
-Pages → Branch = main y /root.
-
-Guardá. La URL pública aparece arriba:
-https://<usuario>.github.io/Proyecto-Osella-85240/
-
-Si usás rutas relativas como en este proyecto, no necesitás cambios extra.
-
-📥 Cómo clonar y correr
-git clone https://github.com/Lucia-osella/Proyecto-Osella-85240.git
-cd Proyecto-Osella-85240
-
-# Opción A: CLI SASS
-sass --watch assets/scss/main.scss assets/css/style.css --style=compressed
-
-# Opción B: con Node
+# desarrollo (watch + sourcemap)
 npm i
-npm run sass:watch
+npm run dev
+
+# build de producción (minificado)
+npm run build
 
 
-Abrí index.html en tu navegador (o servilo con una extensión como “Live Server”).
+SASS incluye:
 
-🧾 Convención de commits (ejemplos)
+Mixins: respond(), respond-down(), focus-ring, surface-card
 
-feat(home): hero responsive + botones centrados
+Placeholders: %surface-card, %chip (reutilizables con @extend)
 
-feat(scss): estructura modular, tokens y mixins
+Tokens: colores, sombras, radios y espaciados
 
-style(projects): cards alineadas, título/desc recortados
+Nesting y estados con &
 
-fix(navbar): estado active y contraste
+Estructuras: @each para utilidades
 
-chore: agrega .gitignore y scripts sass
+SEO
 
-🪪 Licencia
+Reemplazos ya aplicados con la URL de producción:
 
-Uso académico/educativo. Podés reutilizar la estructura y los estilos con atribución a la autora.
+link rel="canonical"
 
-✍️ Autora
+og:url, og:image
+
+twitter:image
+
+JSON-LD (url, image)
+
+Ejemplo (index):
+
+<link rel="canonical" href="https://portfolio-osella-85240.vercel.app/" />
+<meta property="og:url" content="https://portfolio-osella-85240.vercel.app/">
+<meta property="og:image" content="https://portfolio-osella-85240.vercel.app/assets/img/foto-perfil.jpg">
+<meta name="twitter:image" content="https://portfolio-osella-85240.vercel.app/assets/img/foto-perfil.jpg">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Lucía Osella",
+  "jobTitle":"UX/UI Designer",
+  "url":"https://portfolio-osella-85240.vercel.app/",
+  "image":"https://portfolio-osella-85240.vercel.app/assets/img/foto-perfil.jpg",
+  "sameAs":["https://www.behance.net/lucaosella"]
+}
+</script>
+
+
+Nota: si usás cleanUrls en Vercel, /pages/experiencia funciona sin .html. Algunos checkers SEO esperan la versión con .html. Mantené consistencia en tus enlaces internos y, si un checker marca 404, probá con /pages/experiencia.html.
+
+Deploy en Vercel
+
+vercel.json:
+
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".",
+  "cleanUrls": true
+}
+
+
+Vercel ejecuta npm run build (compila SASS) y publica la raíz del proyecto.
+
+No se requiere carpeta public/ para este caso estático.
+
+robots.txt y sitemap.xml
+
+Ubicados en la raíz del proyecto.
+
+robots.txt
+
+# Owner: Osella, Lucía — Comisión 85240
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-osella-85240.vercel.app/sitemap.xml
+
+
+sitemap.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Owner: Osella, Lucía — Comisión 85240 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://portfolio-osella-85240.vercel.app/</loc><lastmod>2025-01-01</lastmod></url>
+  <url><loc>https://portfolio-osella-85240.vercel.app/pages/acercade.html</loc><lastmod>2025-01-01</lastmod></url>
+  <url><loc>https://portfolio-osella-85240.vercel.app/pages/experiencia.html</loc><lastmod>2025-01-01</lastmod></url>
+  <url><loc>https://portfolio-osella-85240.vercel.app/pages/proyectos.html</loc><lastmod>2025-01-01</lastmod></url>
+  <url><loc>https://portfolio-osella-85240.vercel.app/pages/contacto.html</loc><lastmod>2025-01-01</lastmod></url>
+</urlset>
+
+
+Actualizá <lastmod> cuando hagas cambios relevantes.
+
+Compatibilidad
+
+Navegadores: Chrome, Edge, Firefox (últimas versiones)
+
+Viewports: mobile (≤576px), tablet (768–991px), desktop (≥992px)
+
+Autora
 
 Lucía Osella — Diseñadora UX/UI
 Behance: https://www.behance.net/lucaosella
 
-Para feedback o mejoras, abrí un Issue o enviá un PR.
+Comentarios y mejoras son bienvenidos vía Issues o PRs.
